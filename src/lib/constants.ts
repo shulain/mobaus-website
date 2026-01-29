@@ -5,10 +5,10 @@
 
 // 网站基本信息
 export const SITE_CONFIG = {
-  name: 'MobausStudio',
-  title: 'MobausStudio - AI 对话的未来形态',
+  name: 'Mobaus Studio',
+  title: 'Mobaus Studio - AI 对话的未来形态',
   description: '一款跨平台的 AI 对话助手，支持多种 AI 模型和 MCP 扩展。',
-  url: 'https://mobaus.studio',
+  url: 'https://mobaus.com',
   github: 'https://github.com/shulain/MobausStudio',
   version: '0.3.0',
 };

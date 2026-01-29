@@ -123,7 +123,7 @@ export const zhTranslations: Translations = {
       '多模型，无限可能',
       '让创意自由流动',
     ],
-    description: '一款跨平台的 AI 对话助手，支持 GPT-4、Claude、Gemini 等多种模型，通过 MCP 协议连接无限工具，让 AI 成为你的超级助手。',
+    description: '一款跨平台的 AI 对话助手，支持 GPT-5、Claude、Gemini 等多种模型，通过 MCP 协议连接无限工具，让 AI 成为你的超级助手。',
     platformSupport: '支持 macOS · Windows · Linux · Web · Docker',
   },
   highlights: {
@@ -134,12 +134,12 @@ export const zhTranslations: Translations = {
   },
   features: {
     title: '强大功能',
-    subtitle: 'MobausStudio 提供丰富的功能，让 AI 成为你的超级助手',
+    subtitle: 'Mobaus Studio 提供丰富的功能，让 AI 成为你的超级助手',
     items: {
       multiModel: {
         title: '多模型支持',
-        description: '支持 OpenAI GPT-4、Claude 3.5、Gemini 等主流 AI 模型，一键切换，灵活选择最适合的模型。',
-        highlights: ['GPT-4 / GPT-4o', 'Claude 3.5 Sonnet', 'Gemini Pro', '自定义 API'],
+        description: '支持 OpenAI GPT-5、Claude 4、Gemini 等主流 AI 模型，一键切换，灵活选择最适合的模型。',
+        highlights: ['GPT-5 / GPT-4o', 'Claude 4 Sonnet', 'Gemini Pro', '自定义 API'],
       },
       mcp: {
         title: 'MCP 扩展协议',
@@ -199,7 +199,7 @@ export const zhTranslations: Translations = {
     },
   },
   download: {
-    title: '下载 MobausStudio',
+    title: '下载 Mobaus Studio',
     subtitle: '选择适合你操作系统的版本，开始体验 AI 对话的未来形态',
     docker: {
       title: 'Docker',
@@ -217,7 +217,7 @@ export const zhTranslations: Translations = {
     },
   },
   chat: {
-    aiGreeting: '你好！我是 MobausStudio，你的 AI 助手。有什么我可以帮助你的吗？',
+    aiGreeting: '你好！我是 Mobaus Studio，你的 AI 助手。有什么我可以帮助你的吗？',
     userMessage: '帮我分析一下这个项目的代码结构',
     analyzing: '正在分析...',
   },
@@ -231,7 +231,7 @@ export const zhTranslations: Translations = {
   },
   cta: {
     title: '准备好开始了吗？',
-    description: '立即下载 MobausStudio，体验 AI 对话的未来形态。',
+    description: '立即下载 Mobaus Studio，体验 AI 对话的未来形态。',
     subDescription: '完全免费，开源可自托管。',
     downloadButton: '免费下载',
     docsButton: '查看文档',
@@ -262,7 +262,7 @@ export const enTranslations: Translations = {
       'Multi-Model, Infinite Possibilities',
       'Let Creativity Flow Freely',
     ],
-    description: 'A cross-platform AI chat assistant supporting GPT-4, Claude, Gemini and more. Connect unlimited tools via MCP protocol, making AI your super assistant.',
+    description: 'A cross-platform AI chat assistant supporting GPT-5, Claude, Gemini and more. Connect unlimited tools via MCP protocol, making AI your super assistant.',
     platformSupport: 'Supports macOS · Windows · Linux · Web · Docker',
   },
   highlights: {
@@ -273,12 +273,12 @@ export const enTranslations: Translations = {
   },
   features: {
     title: 'Powerful Features',
-    subtitle: 'MobausStudio provides rich features to make AI your super assistant',
+    subtitle: 'Mobaus Studio provides rich features to make AI your super assistant',
     items: {
       multiModel: {
         title: 'Multi-Model Support',
-        description: 'Support OpenAI GPT-4, Claude 3.5, Gemini and other mainstream AI models. Switch with one click, flexibly choose the most suitable model.',
-        highlights: ['GPT-4 / GPT-4o', 'Claude 3.5 Sonnet', 'Gemini Pro', 'Custom API'],
+        description: 'Support OpenAI GPT-5, Claude 4, Gemini and other mainstream AI models. Switch with one click, flexibly choose the most suitable model.',
+        highlights: ['GPT-5 / GPT-4o', 'Claude 4 Sonnet', 'Gemini Pro', 'Custom API'],
       },
       mcp: {
         title: 'MCP Extension Protocol',
@@ -338,7 +338,7 @@ export const enTranslations: Translations = {
     },
   },
   download: {
-    title: 'Download MobausStudio',
+    title: 'Download Mobaus Studio',
     subtitle: 'Choose the version for your operating system and start experiencing the future of AI conversation',
     docker: {
       title: 'Docker',
@@ -356,7 +356,7 @@ export const enTranslations: Translations = {
     },
   },
   chat: {
-    aiGreeting: "Hello! I'm MobausStudio, your AI assistant. How can I help you?",
+    aiGreeting: "Hello! I'm Mobaus Studio, your AI assistant. How can I help you?",
     userMessage: 'Help me analyze the code structure of this project',
     analyzing: 'Analyzing...',
   },
@@ -370,7 +370,7 @@ export const enTranslations: Translations = {
   },
   cta: {
     title: 'Ready to Get Started?',
-    description: 'Download MobausStudio now and experience the future of AI conversation.',
+    description: 'Download Mobaus Studio now and experience the future of AI conversation.',
     subDescription: 'Completely free, open source and self-hostable.',
     downloadButton: 'Free Download',
     docsButton: 'View Docs',
