@@ -94,36 +94,42 @@ export const FEATURES = [
     title: '多模型支持',
     titleEn: 'Multi-Model Support',
     description: '支持 OpenAI、Anthropic Claude 等主流 AI 模型，自由切换',
+    descriptionEn: 'Support OpenAI, Anthropic Claude and other mainstream AI models, switch freely',
   },
   {
     icon: 'Plug',
     title: 'MCP 扩展',
     titleEn: 'MCP Extension',
     description: '通过 MCP 协议连接外部工具和服务，无限扩展能力',
+    descriptionEn: 'Connect external tools and services via MCP protocol, unlimited expansion',
   },
   {
     icon: 'Sparkles',
     title: '技能系统',
     titleEn: 'Skills System',
     description: '预设提示词模板，快速完成特定任务',
+    descriptionEn: 'Preset prompt templates for quick task completion',
   },
   {
     icon: 'Workflow',
     title: '智能体',
     titleEn: 'Agents',
     description: '创建专属 AI 助手，配置特定行为和能力',
+    descriptionEn: 'Create your own AI assistant with specific behaviors and capabilities',
   },
   {
     icon: 'Monitor',
     title: '跨平台',
     titleEn: 'Cross-Platform',
     description: '支持 macOS、Windows、Linux 桌面应用和 Web 版本',
+    descriptionEn: 'Support macOS, Windows, Linux desktop apps and Web version',
   },
   {
     icon: 'RefreshCw',
     title: '自动更新',
     titleEn: 'Auto Update',
     description: '桌面应用内置自动更新，始终保持最新版本',
+    descriptionEn: 'Built-in auto-update for desktop apps, always stay up-to-date',
   },
 ];
 

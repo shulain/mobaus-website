@@ -244,7 +244,7 @@ export function Header() {
           <button
             className="md:hidden p-2 rounded-lg transition-colors text-white hover:bg-white/10"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="菜单"
+            aria-label={t.common.menu}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

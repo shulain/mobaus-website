@@ -22,6 +22,7 @@ export interface Translations {
     systemRequirements: string;
     otherDeployments: string;
     viewDocs: string;
+    menu: string;
   };
   // 首页
   hero: {
@@ -107,6 +108,7 @@ export interface Translations {
   // 主题切换
   themeSwitcher: {
     title: string;
+    ariaLabel: string;
   };
 }
 
@@ -126,6 +128,7 @@ export const zhTranslations: Translations = {
     systemRequirements: '系统要求',
     otherDeployments: '其他部署方式',
     viewDocs: '查看文档',
+    menu: '菜单',
   },
   hero: {
     tagline: [
@@ -255,6 +258,7 @@ export const zhTranslations: Translations = {
   },
   themeSwitcher: {
     title: '选择主题风格',
+    ariaLabel: '切换主题',
   },
 };
 
@@ -274,6 +278,7 @@ export const enTranslations: Translations = {
     systemRequirements: 'System Requirements',
     otherDeployments: 'Other Deployments',
     viewDocs: 'View Docs',
+    menu: 'Menu',
   },
   hero: {
     tagline: [
@@ -403,6 +408,7 @@ export const enTranslations: Translations = {
   },
   themeSwitcher: {
     title: 'Select Theme Style',
+    ariaLabel: 'Toggle Theme',
   },
 };
 

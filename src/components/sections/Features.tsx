@@ -15,6 +15,7 @@ import {
   RefreshCw,
 } from 'lucide-react';
 import { useTheme } from '@/lib/theme-context';
+import { useLocale } from '@/lib/i18n';
 import { FEATURES } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 import { Card, CardTitle, CardDescription, CardIcon } from '@/components/ui/Card';
@@ -34,6 +35,7 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; className?: s
  */
 export function Features() {
   const { theme } = useTheme();
+  const { t, locale } = useLocale();
 
   // 获取标题样式
   const getTitleStyles = () => {
@@ -63,10 +65,10 @@ export function Features() {
           transition={{ duration: 0.5 }}
         >
           <h2 className={cn('text-4xl font-bold mb-4', getTitleStyles())}>
-            强大功能
+            {t.features.title}
           </h2>
           <p className={cn('text-lg max-w-2xl mx-auto', getSubtitleStyles())}>
-            MobausStudio 提供丰富的功能，让 AI 成为你的超级助手
+            {t.features.subtitle}
           </p>
         </motion.div>
 
@@ -80,8 +82,8 @@ export function Features() {
                 <CardIcon>
                   {IconComponent && <IconComponent size={32} />}
                 </CardIcon>
-                <CardTitle>{feature.title}</CardTitle>
-                <CardDescription>{feature.description}</CardDescription>
+                <CardTitle>{locale === 'zh' ? feature.title : feature.titleEn}</CardTitle>
+                <CardDescription>{locale === 'zh' ? feature.description : feature.descriptionEn}</CardDescription>
               </Card>
             );
           })}

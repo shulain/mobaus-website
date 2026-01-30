@@ -38,7 +38,7 @@ export function ThemeSwitcher() {
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        aria-label="切换主题"
+        aria-label={t.themeSwitcher.ariaLabel}
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
