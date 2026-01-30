@@ -97,6 +97,17 @@ export interface Translations {
     downloadButton: string;
     docsButton: string;
   };
+  // 平台支持
+  platforms: {
+    title: string;
+    subtitle: string;
+    web: string;
+    docker: string;
+  };
+  // 主题切换
+  themeSwitcher: {
+    title: string;
+  };
 }
 
 // 中文翻译
@@ -236,6 +247,15 @@ export const zhTranslations: Translations = {
     downloadButton: '免费下载',
     docsButton: '查看文档',
   },
+  platforms: {
+    title: '全平台支持',
+    subtitle: '无论你使用什么设备，Mobaus Studio 都能完美运行',
+    web: '浏览器直接访问',
+    docker: '一键容器部署',
+  },
+  themeSwitcher: {
+    title: '选择主题风格',
+  },
 };
 
 // 英文翻译
@@ -374,6 +394,15 @@ export const enTranslations: Translations = {
     subDescription: 'Completely free, open source and self-hostable.',
     downloadButton: 'Free Download',
     docsButton: 'View Docs',
+  },
+  platforms: {
+    title: 'Cross-Platform Support',
+    subtitle: 'No matter what device you use, Mobaus Studio runs perfectly',
+    web: 'Access via Browser',
+    docker: 'One-Click Container Deploy',
+  },
+  themeSwitcher: {
+    title: 'Select Theme Style',
   },
 };
 

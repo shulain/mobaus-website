@@ -8,22 +8,24 @@
 import { motion } from 'framer-motion';
 import { Apple, Monitor, Terminal, Globe, Container } from 'lucide-react';
 import { useTheme } from '@/lib/theme-context';
+import { useLocale } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
-
-// 平台数据
-const platforms = [
-  { name: 'macOS', icon: Apple, description: 'Apple Silicon & Intel' },
-  { name: 'Windows', icon: Monitor, description: 'Windows 10+' },
-  { name: 'Linux', icon: Terminal, description: 'Debian, Fedora, AppImage' },
-  { name: 'Web', icon: Globe, description: '浏览器直接访问' },
-  { name: 'Docker', icon: Container, description: '一键容器部署' },
-];
 
 /**
  * 平台支持区块
  */
 export function Platforms() {
   const { theme } = useTheme();
+  const { t } = useLocale();
+
+  // 平台数据（使用 i18n）
+  const platforms = [
+    { name: 'macOS', icon: Apple, description: 'Apple Silicon & Intel' },
+    { name: 'Windows', icon: Monitor, description: 'Windows 10+' },
+    { name: 'Linux', icon: Terminal, description: 'Debian, Fedora, AppImage' },
+    { name: 'Web', icon: Globe, description: t.platforms.web },
+    { name: 'Docker', icon: Container, description: t.platforms.docker },
+  ];
 
   // 获取标题样式
   const getTitleStyles = () => {
@@ -70,10 +72,10 @@ export function Platforms() {
           transition={{ duration: 0.5 }}
         >
           <h2 className={cn('text-4xl font-bold mb-4', getTitleStyles())}>
-            全平台支持
+            {t.platforms.title}
           </h2>
           <p className={cn('text-lg max-w-2xl mx-auto', getSubtitleStyles())}>
-            无论你使用什么设备，MobausStudio 都能完美运行
+            {t.platforms.subtitle}
           </p>
         </motion.div>
 

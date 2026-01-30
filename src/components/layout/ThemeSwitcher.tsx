@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Palette, X, Check } from 'lucide-react';
 import { useTheme } from '@/lib/theme-context';
+import { useLocale } from '@/lib/i18n';
 import { ThemeStyle, THEMES } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 
@@ -17,6 +18,7 @@ import { cn } from '@/lib/utils';
  */
 export function ThemeSwitcher() {
   const { theme, setTheme, themes } = useTheme();
+  const { t, locale } = useLocale();
   const [isOpen, setIsOpen] = useState(false);
 
   const themeList = Object.entries(themes) as [ThemeStyle, typeof THEMES[ThemeStyle]][];
@@ -83,7 +85,7 @@ export function ThemeSwitcher() {
               'text-sm font-semibold mb-3',
               theme === 'matrix' ? 'text-[var(--theme-primary)] font-mono' : 'text-white'
             )}>
-              {theme === 'matrix' ? '// 选择主题风格' : '选择主题风格'}
+              {theme === 'matrix' ? `// ${t.themeSwitcher.title}` : t.themeSwitcher.title}
             </h3>
 
             <div className="space-y-2">
@@ -125,7 +127,7 @@ export function ThemeSwitcher() {
                       'font-medium text-sm',
                       theme === 'matrix' ? 'text-[var(--theme-primary)] font-mono' : 'text-white'
                     )}>
-                      {config.nameZh}
+                      {locale === 'zh' ? config.nameZh : config.name}
                     </div>
                     <div className={cn(
                       'text-xs',
