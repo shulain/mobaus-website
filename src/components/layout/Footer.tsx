@@ -5,6 +5,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Heart } from 'lucide-react';
 import { useTheme } from '@/lib/theme-context';
@@ -61,15 +62,30 @@ export function Footer() {
           {/* Logo 和描述 */}
           <div className="md:col-span-2">
             <motion.div
-              className={cn(
-                'text-2xl font-bold mb-4',
-                theme === 'cyberpunk' ? 'text-[var(--theme-primary)]' :
-                theme === 'matrix' ? 'text-[var(--theme-primary)] font-mono' :
-                'text-white'
-              )}
+              className="flex items-center gap-3 mb-4"
               whileHover={{ scale: 1.02 }}
             >
-              {theme === 'matrix' ? `> ${SITE_CONFIG.name}` : SITE_CONFIG.name}
+              {/* Logo 图标 */}
+              <div className="w-8 h-8">
+                <Image
+                  src="/logo/mobaus.svg"
+                  alt={SITE_CONFIG.name}
+                  width={32}
+                  height={32}
+                  className="w-full h-full"
+                />
+              </div>
+              {/* 站点名称 */}
+              <span
+                className={cn(
+                  'text-2xl font-bold',
+                  theme === 'cyberpunk' ? 'text-[var(--theme-primary)]' :
+                  theme === 'matrix' ? 'text-[var(--theme-primary)] font-mono' :
+                  'text-white'
+                )}
+              >
+                {theme === 'matrix' ? `> ${SITE_CONFIG.name}` : SITE_CONFIG.name}
+              </span>
             </motion.div>
             <p className={cn('text-sm max-w-md', getTextStyles())}>
               {t.footer.description}

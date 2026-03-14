@@ -7,9 +7,10 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ExternalLink, Github, Sparkles } from 'lucide-react';
+import { Menu, X, ExternalLink, Github } from 'lucide-react';
 import { useTheme } from '@/lib/theme-context';
 import { useLocale } from '@/lib/i18n';
 import { NAV_LINKS, SITE_CONFIG } from '@/lib/constants';
@@ -18,11 +19,11 @@ import { Button } from '@/components/ui/Button';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
 /**
- * 酷炫 Logo 组件
+ * Logo 组件
  */
 function Logo() {
   const { theme, themeConfig } = useTheme();
-  const { primary, secondary, accent } = themeConfig.colors;
+  const { primary } = themeConfig.colors;
   const router = useRouter();
 
   // 点击 Logo 跳转首页并滚动到顶部
@@ -37,10 +38,25 @@ function Logo() {
     return (
       <a href="/" onClick={handleClick} className="group relative cursor-pointer">
         <motion.div
-          className="flex items-center gap-2"
+          className="flex items-center gap-3"
           whileHover={{ scale: 1.02 }}
           transition={{ type: 'spring', stiffness: 400 }}
         >
+          {/* Logo 图标 */}
+          <motion.div
+            className="relative w-8 h-8"
+            whileHover={{ rotate: 360 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Image
+              src="/logo/mobaus.svg"
+              alt={SITE_CONFIG.name}
+              width={32}
+              height={32}
+              className="w-full h-full"
+              priority
+            />
+          </motion.div>
           {/* 终端光标 */}
           <motion.span
             className="text-[var(--theme-primary)] font-mono text-xl"
@@ -60,48 +76,30 @@ function Logo() {
   return (
     <a href="/" onClick={handleClick} className="group relative cursor-pointer">
       <motion.div
-        className="flex items-center gap-2"
+        className="flex items-center gap-3"
         whileHover={{ scale: 1.02 }}
         transition={{ type: 'spring', stiffness: 400 }}
       >
         {/* Logo 图标 */}
         <motion.div
-          className="relative w-8 h-8 flex items-center justify-center"
-          whileHover={{ rotate: 180 }}
-          transition={{ duration: 0.5 }}
+          className="relative w-8 h-8"
+          whileHover={{ rotate: 360 }}
+          transition={{ duration: 0.6 }}
         >
-          {/* 外圈光环 */}
-          <motion.div
-            className="absolute inset-0 rounded-lg"
-            style={{
-              backgroundImage: `linear-gradient(135deg, ${primary}, ${secondary}, ${accent})`,
-              opacity: 0.8,
-            }}
-            animate={{
-              rotate: [0, 360],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: 'linear',
-            }}
+          <Image
+            src="/logo/mobaus.svg"
+            alt={SITE_CONFIG.name}
+            width={32}
+            height={32}
+            className="w-full h-full"
+            priority
           />
-          {/* 内部图标 */}
-          <div className="relative z-10 w-6 h-6 bg-black rounded-md flex items-center justify-center">
-            <Sparkles size={14} className="text-[var(--theme-primary)]" />
-          </div>
         </motion.div>
 
         {/* Logo 文字 */}
         <div className="relative">
           <motion.span
-            className="font-bold text-xl tracking-tight"
-            style={{
-              backgroundImage: `linear-gradient(135deg, ${primary}, ${secondary})`,
-              backgroundClip: 'text',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
+            className="font-bold text-xl tracking-tight text-white"
           >
             {SITE_CONFIG.name}
           </motion.span>
@@ -109,7 +107,7 @@ function Logo() {
           <motion.div
             className="absolute -bottom-1 left-0 h-0.5 rounded-full"
             style={{
-              backgroundImage: `linear-gradient(90deg, ${primary}, ${secondary}, ${accent})`,
+              backgroundColor: primary,
             }}
             initial={{ width: 0 }}
             whileHover={{ width: '100%' }}
